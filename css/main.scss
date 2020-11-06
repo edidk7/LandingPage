@@ -1,0 +1,172 @@
+.overlay-menu-desktop {
+    position: absolute;
+    background: #252525;
+    padding: 2em;
+    width: calc(100% - 0em);
+    height: calc(100vh - 0em);
+    display: none;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 999;
+    .logo-fm{
+        float: left;
+        cursor: pointer;    
+    }
+    .close-btn {
+        width: 28px;
+        margin: 2% auto 0 auto;
+        float: right;
+        cursor: pointer;
+        opacity: 0;
+    }
+    ul {
+        list-style-type: none;
+        margin: 15% auto 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        width: 80%;
+        a {
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            font-size: 1.4em;
+            font-weight: 100;
+        }
+        span {
+            color: gray;
+            display: block;
+            font-size: .75em;
+            margin-top: 20px;
+        }
+        li {
+            opacity: 0;
+        }
+    }
+}
+
+.show-menu {
+    display: block;
+    animation: slide-menu 1s ease-in forwards;
+    .logo-fm {
+        opacity: 0;
+        animation: show-x 4s 1s forwards;
+    }
+    .img-uvas-menu {
+        opacity: 0;
+        animation: show-x 4s 1s forwards;
+    }
+    .close-btn {
+        animation: show-x 4s 1s forwards;
+    }
+
+    li.btn-menu:nth-of-type(1) {
+        animation: menu-item-anim .6s forwards 1s ease-in-out;
+    }
+    li.btn-menu:nth-of-type(2) {
+        animation: menu-item-anim .6s forwards 1.2s ease-in-out;
+    }
+    li.btn-menu:nth-of-type(3) {
+        animation: menu-item-anim .6s forwards 1.4s ease-in-out;
+    }
+    li.btn-menu:nth-of-type(4) {
+        animation: menu-item-anim .6s forwards 1.6s ease-in-out;
+    }     
+}
+
+.show-menu {
+    display: block;
+
+    li.btn-rrss:nth-of-type(1) {
+        animation: menu-item-anim .7s forwards 2.2s ease-in-out;
+    }  
+    li.btn-rrss:nth-of-type(2) {
+        animation: menu-item-anim .7s forwards 2.2s ease-in-out;
+    }  
+    li.btn-rrss:nth-of-type(3) {
+        animation: menu-item-anim .7s forwards 2.2s ease-in-out;
+    }  
+    li.btn-rrss:nth-of-type(4) {
+        animation: menu-item-anim .7s forwards 2.2s ease-in-out;
+    }    
+}
+
+
+            
+@keyframes slide-menu {
+    from {
+        transform: scaleX(0)
+    }
+    to {
+        transform: scaleX(1)
+    }
+}
+
+@keyframes show-x {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes menu-item-anim {
+    0% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1);
+    }
+    1.3% {
+        transform: matrix3d(1, 0, 0, 0, 0, 3.905, 0, 0, 0, 0, 1, 0, 0, 237.02, 0, 1);
+    }
+    2.55% {
+        transform: matrix3d(1, 0, 0, 0, 0, 4.554, 0, 0, 0, 0, 1, 0, 0, 182.798, 0, 1);
+    }
+    4.1% {
+        transform: matrix3d(1, 0, 0, 0, 0, 4.025, 0, 0, 0, 0, 1, 0, 0, 125.912, 0, 1);
+    }
+    5.71% {
+        transform: matrix3d(1, 0, 0, 0, 0, 3.039, 0, 0, 0, 0, 1, 0, 0, 79.596, 0, 1);
+    }
+    8.11% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1.82, 0, 0, 0, 0, 1, 0, 0, 31.647, 0, 1);
+    }
+    8.81% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1.581, 0, 0, 0, 0, 1, 0, 0, 21.84, 0, 1);
+    }
+    11.96% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1.034, 0, 0, 0, 0, 1, 0, 0, -4.825, 0, 1);
+    }
+    12.11% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1.023, 0, 0, 0, 0, 1, 0, 0, -5.53, 0, 1);
+    }
+    15.07% {
+        transform: matrix3d(1, 0, 0, 0, 0, 0.947, 0, 0, 0, 0, 1, 0, 0, -12.662, 0, 1);
+    }
+    16.12% {
+        transform: matrix3d(1, 0, 0, 0, 0, 0.951, 0, 0, 0, 0, 1, 0, 0, -13.007, 0, 1);
+    }
+    27.23% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, -2.352, 0, 1);
+    }
+    27.58% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, -2.121, 0, 1);
+    }
+    38.34% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.311, 0, 1);
+    }
+    40.09% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.291, 0, 1);
+    }
+    50% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.048, 0, 1);
+    }
+    60.56% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.007, 0, 1);
+    }
+    82.78% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+}
